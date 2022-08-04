@@ -12,12 +12,11 @@ $collection2 = $database->UsuariosYagama;
 
 $PuntajeUnity = $_GET['PuntajeUnity'];
 $CorreoUnity = $_GET['CorreoUnity'];
-$TiempoUnity = $_GET['TiempoUnity'];
 
 // Actualizar un dato ---------------------------------------------------------------
 
 $filtro = ['CORREO' => $CorreoUnity];
-$update = ['$set' => ['PUNTAJE' => intval($PuntajeUnity) , 'INTENTO' => $TiempoUnity]];
+$update = ['$set' => ['PUNTAJE' => intval($PuntajeUnity)];
 
 $Actualizar = $collection2->updateOne($filtro,$update);
 
