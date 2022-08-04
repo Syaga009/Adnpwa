@@ -6,9 +6,9 @@ require_once __DIR__ . '/vendor/autoload.php';
 $client = new MongoDB\Client('mongodb+srv://TBBLuxari:DMc53jwH5CIQAryP@prueba-puntos.veb9sop.mongodb.net/?retryWrites=true&w=majority');
 
 // Traet Base de datos---------------------------------------------------------------
-$database = $client->Sesion;
+$database = $client->Sesiones;
 // Crear o Traer coleccion-----------------------------------------------------------
-$collection2 = $database->Yagama;
+$collection2 = $database->UsuariosYagama;
 
 $PuntajeUnity = $_GET['PuntajeUnity'];
 $CorreoUnity = $_GET['CorreoUnity'];
