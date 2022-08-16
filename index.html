@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
-
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Youtube</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/DemoPruebaAlVolante.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body style="margin: 0 0.5%; background-color: black;">
+    <div aling="center">
+      <div id="unityContainer" style="width: 100%; height:auto"></div>
+    </div>
+    <script>
+          setTimeout(function(){
+              $("#unityContainer").find("button").click();
+            }, 200);
+    </script>  
 </body>
 </html>
