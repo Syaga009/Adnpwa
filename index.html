@@ -8,13 +8,19 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/DemoPruebaAlVolante.json", {onProgress: UnityProgress});
     </script>
   </head>
-  <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 1640px; height: 800px"></div>
+  <body style="margin: 0 8%">
+    <div aling="center">
+      <div id="unityContainer" style="width: 100%; height:auto"></div>
     </div>
-  </body>
+    <script>
+          setTimeout(function(){
+              $("#unityContainer").find("button").click();
+            }, 200);
+    </script>  
+</body>
 </html>
