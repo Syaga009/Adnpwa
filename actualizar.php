@@ -8,15 +8,15 @@ $client = new MongoDB\Client('mongodb+srv://TBBLuxari:DMc53jwH5CIQAryP@prueba-pu
 // Traet Base de datos---------------------------------------------------------------
 $database = $client->Sesiones;
 // Crear o Traer coleccion-----------------------------------------------------------
-$collection2 = $database->UsuariosYagama;
+$collection2 = $database->usuariostunjas;
 
 $PuntajeUnity = $_GET['PuntajeUnity'];
 $CorreoUnity = $_GET['CorreoUnity'];
 
 // Actualizar un dato ---------------------------------------------------------------
 
-$filtro = ['user' => $CorreoUnity];
-$update = ['$set' => ['puntaje' => intval($PuntajeUnity) ]];
+$filtro = ['email' => $CorreoUnity];
+$update = ['$set' => ['puntos' => intval($PuntajeUnity) ]];
 
 $Actualizar = $collection2->updateOne($filtro,$update);
 
