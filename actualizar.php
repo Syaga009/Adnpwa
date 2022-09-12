@@ -16,10 +16,9 @@ $MetaUnity = $_GET['MetaUnity'];
 // Actualizar un dato ---------------------------------------------------------------
 
 $filtro = ['email' => $CorreoUnity];
-$meta = ['$set' => ['meta' => intval($MetaUnity) ]];
-$update = ['$set' => ['puntos' => intval($PuntajeUnity) ]];
+$update = ['$set' => ['meta' => intval($MetaUnity) ]];
 
-$Actualizar = $collection2->updateOne($filtro,$meta,$update);
+$Actualizar = $collection2->updateOne($filtro,$update);
 
 echo 'Actualizado'
 
