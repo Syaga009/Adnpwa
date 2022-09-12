@@ -8,16 +8,16 @@ $client = new MongoDB\Client('mongodb+srv://TBBLuxari:DMc53jwH5CIQAryP@prueba-pu
 // Traet Base de datos---------------------------------------------------------------
 $database = $client->Sesiones;
 // Crear o Traer coleccion-----------------------------------------------------------
-$collection2 = $database->UsuariosYagama;
+$collection2 = $database->usuariostunjas;
 
 $PuntajeUnity = $_GET['PuntajeUnity'];
 $CorreoUnity = $_GET['CorreoUnity'];
 $MetaUnity = $_GET['MetaUnity'];
 // Actualizar un dato ---------------------------------------------------------------
 
-$filtro = ['user' => $CorreoUnity];
+$filtro = ['email' => $CorreoUnity];
 $meta = ['$set' => ['meta' => intval($MetaUnity) ]];
-$update = ['$set' => ['puntaje' => intval($PuntajeUnity) ]];
+$update = ['$set' => ['puntos' => intval($PuntajeUnity) ]];
 
 $Actualizar = $collection2->updateOne($filtro,$meta,$update);
 
@@ -27,6 +27,3 @@ echo 'Actualizado'
     Se actualizo o no se actualizo
 */ 
 ?>
-
-
-
