@@ -16,7 +16,7 @@ $MetaUnity = $_GET['MetaUnity'];
 // Actualizar un dato ---------------------------------------------------------------
 
 $filtro = ['email' => $CorreoUnity];
-$update = ['$set' => ['meta' => intval($MetaUnity) ]];
+$update = ['$set' => ['meta' => strval($MetaUnity) ]];
 
 $Actualizar = $collection2->updateOne($filtro,$update);
 
