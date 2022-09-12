@@ -8,16 +8,16 @@ $client = new MongoDB\Client('mongodb+srv://TBBLuxari:DMc53jwH5CIQAryP@prueba-pu
 // Traet Base de datos---------------------------------------------------------------
 $database = $client->Sesiones;
 // Crear o Traer coleccion-----------------------------------------------------------
-$collection2 = $database->usuariostunjas;
+$collection2 = $database->UsuariosYagama;
 
 $PuntajeUnity = $_GET['PuntajeUnity'];
 $CorreoUnity = $_GET['CorreoUnity'];
 $MetaUnity = $_GET['MetaUnity'];
 // Actualizar un dato ---------------------------------------------------------------
 
-$filtro = ['email' => $CorreoUnity];
+$filtro = ['user' => $CorreoUnity];
 $meta = ['$set' => ['meta' => intval($MetaUnity) ]];
-$update = ['$set' => ['puntos' => intval($PuntajeUnity) ]];
+$update = ['$set' => ['puntaje' => intval($PuntajeUnity) ]];
 
 $Actualizar = $collection2->updateOne($filtro,$meta,$update);
 
