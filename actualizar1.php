@@ -20,7 +20,7 @@ $update = ['$set' => ['meta' => strval($MetaUnity) ,
                      'puntos' => intval($PuntajeUnity)]];
 $update1 = ['$set' => ['puntos' => intval($PuntajeUnity) ]];
 
-$Actualizar = $collection2->updateOne($filtro,$update1);
+$Actualizar = $collection2->updateOne($filtro,$update);
 
 echo 'Actualizado'
 
