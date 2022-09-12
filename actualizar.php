@@ -19,7 +19,7 @@ $filtro = ['email' => $CorreoUnity];
 $meta = ['$set' => ['meta' => intval($MetaUnity) ]];
 $update = ['$set' => ['puntos' => intval($PuntajeUnity) ]];
 
-$Actualizar = $collection2->updateOne($filtro,$update,$meta);
+$Actualizar = $collection2->updateOne($filtro,$meta,$update);
 
 echo 'Actualizado'
 
