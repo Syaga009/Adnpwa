@@ -12,11 +12,10 @@ $collection2 = $database->usuariostunjas;
 
 $PuntajeUnity = $_GET['PuntajeUnity'];
 $CorreoUnity = $_GET['CorreoUnity'];
-$MetaUnity = $_GET['MetaUnity'];
 // Actualizar un dato ---------------------------------------------------------------
 
 $filtro = ['email' => $CorreoUnity];
-$update = ['$set' => ['meta' => intval($MetaUnity) ]];
+$update = ['$set' => ['puntos' => intval($MetaUnity) ]];
 
 $Actualizar = $collection2->updateOne($filtro,$update);
 
