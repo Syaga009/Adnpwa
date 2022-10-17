@@ -10,17 +10,19 @@ $database = $client->Sesiones;
 // Crear o Traer coleccion-----------------------------------------------------------
 $collection2 = $database->usuariostunjas;
 
-
+$PuntajeUnity = $_GET['PuntajeUnity'];
 $CorreoUnity = $_GET['CorreoUnity'];
+$MetaUnity = $_GET['MetaUnity'];
 // Actualizar un dato ---------------------------------------------------------------
-$sql = "SELECT puntos FROM $collection2 WHERE email='$CorreoUnity'";
-$result = mysql_query($sql);
-$value = mysql_fetch_object($result);
 
+$filtro = ['email' => $CorreoUnity];
+$update = ['$set' => ['meta' => strval($MetaUnity) ,
+                     'puntos' => intval($PuntajeUnity)]];
+$update1 = ['$set' => ['puntos' => intval($PuntajeUnity) ]];
 
-$filtro = db.empleados.find( { email: "Laura" } )
+$Actualizar = $collection2->updateOne($filtro,$update);
 
-echo $filtro
+echo 'Actualizado'
 
 /*
     Se actualizo o no se actualizo
