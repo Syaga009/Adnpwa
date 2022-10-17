@@ -21,7 +21,7 @@ $update = ['$set' => ['meta' => strval($MetaUnity) ,
 $update1 = ['$set' => ['puntos' => intval($PuntajeUnity) ]];
 
 $Actualizar = $collection2->updateOne($filtro,$update);
-
+$seleccion = $database.$collection2.find( { email: $filtro } )
 echo 'Actualizado'
 
 /*
