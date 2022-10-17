@@ -2,29 +2,17 @@
 //(ACTUALIZAR)
 header("Access-Control-Allow-Origin: *");
 require_once __DIR__ . '/vendor/autoload.php';
-// Crear Cliente---------------------------------------------------------------------
-$client = new MongoDB\Client('mongodb+srv://TBBLuxari:DMc53jwH5CIQAryP@prueba-puntos.veb9sop.mongodb.net/?retryWrites=true&w=majority');
 
-// Traet Base de datos---------------------------------------------------------------
-$database = $client->Sesiones;
-// Crear o Traer coleccion-----------------------------------------------------------
-$collection2 = $database->usuariostunjas;
+myclient = pymongo.MongoClient('mongodb+srv://TBBLuxari:DMc53jwH5CIQAryP@prueba-puntos.veb9sop.mongodb.net/?retryWrites=true&w=majority')
+mydb = myclient["Sesiones"]
+mycol = mydb["usuariostunjas"]
 
-$PuntajeUnity = $_GET['PuntajeUnity'];
-$CorreoUnity = $_GET['CorreoUnity'];
-$MetaUnity = $_GET['MetaUnity'];
-// Actualizar un dato ---------------------------------------------------------------
+myquery = { "email": "adntraining" }
 
-$filtro = ['email' => $CorreoUnity];
-$update = ['$set' => ['meta' => strval($MetaUnity) ,
-                     'puntos' => intval($PuntajeUnity)]];
-$update1 = ['$set' => ['puntos' => intval($PuntajeUnity) ]];
+mydoc = mycol.find(myquery)
 
-$Actualizar = $collection2->updateOne($filtro,$update);
-$seleccion = $collection2->find( { email: $filtro } );
-echo 'Actualizado'
-echo $seleccion;
-/*
-    Se actualizo o no se actualizo
-*/ 
+for x in mydoc:
+  print(x)
+
+
 ?>
