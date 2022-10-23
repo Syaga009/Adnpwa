@@ -10,13 +10,13 @@ $database = $client->Sesiones;
 // Crear o Traer coleccion-----------------------------------------------------------
 $collection2 = $database->usuariostunjas;
 
-$PuntajeUnity = $_GET['PuntajeUnity'];
+$PuntajeUnity = $_GET['Puntos3'];
 $CorreoUnity = $_GET['CorreoUnity'];
 $MetaUnity = $_GET['Puntos3'];
 // Actualizar un dato ---------------------------------------------------------------
 
 $filtro = ['email' => $CorreoUnity];
-$update = ['$set' => ['puntos3' => strval($MetaUnity)]];
+$update = ['$set' => ['puntos3' => strval($PuntajeUnity)]];
 
 $Actualizar = $collection2->updateOne($filtro,$update);
 
