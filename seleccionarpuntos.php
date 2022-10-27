@@ -20,7 +20,7 @@ $correo = $collection2->find($filtro);
 //$Actualizar = $collection2->updateOne($filtro,$update);
 //$result = $collection2->find(array(), array('projection' => array('name' => 1, '_id' => 1)));
 echo 'Actualizado';
-echo $correo;
+echo '$correo';
 
 /*
     Se actualizo o no se actualizo
