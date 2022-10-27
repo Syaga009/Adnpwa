@@ -18,7 +18,7 @@ $correo = $collection2->find($filtro);
 //$update = ['$set' => ['puntos9' => strval($PuntajeUnity)]];
 
 //$Actualizar = $collection2->updateOne($filtro,$update);
-$result = $collection2->find(array(), array('projection' => array('name' => 1, '_id' => 1)));
+$result = $collection2->find(array(), array('projection' => array('nombre' => 'Pascual', '_id' => '633f7bb9543bc9f3d8b635b0')));
 echo 'Actualizado';
 echo $correo;
 
