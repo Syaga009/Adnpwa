@@ -13,14 +13,15 @@ $collection2 = $database->usuariostunjas;
 
 $Email = $_GET['email'];
 $filtro = ['email' => $Email];
-$correo = $collection2->find($filtro);
+
 
 //$update = ['$set' => ['puntos9' => strval($PuntajeUnity)]];
 
 //$Actualizar = $collection2->updateOne($filtro,$update);
-$result = $collection2->find(array(), array('projection' => array('nombre' => 'Pascual', '_id' => '633f7bb9543bc9f3d8b635b0')));
+//$result = $collection2->find(array(), array('projection' => array('nombre' => 'Pascual', '_id' => '633f7bb9543bc9f3d8b635b0')));
+$result = $collection2->find(array('email' => 'adntraining'));
 echo 'Actualizado';
-echo $correo;
+echo $result;
 
 /*
     Se actualizo o no se actualizo
