@@ -21,7 +21,7 @@ $filtro = ['email' => $Email];
 //$result = $collection2->find(array(), array('projection' => array('nombre' => 'Pascual', '_id' => '633f7bb9543bc9f3d8b635b0')));
 $result = $collection2->find(array('email' => 'adntraining'));
 echo 'Actualizado';
-echo 'este es el resultado '+ $result;
+echo 'este es el resultado ';
 
 /*
     Se actualizo o no se actualizo
