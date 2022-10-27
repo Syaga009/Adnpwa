@@ -19,7 +19,7 @@ $filtro = ['email' => $Email];
 
 //$Actualizar = $collection2->updateOne($filtro,$update);
 //$result = $collection2->find(array(), array('projection' => array('nombre' => 'Pascual', '_id' => '633f7bb9543bc9f3d8b635b0')));
-$result = $collection2->find();
+$result = $collection2->findOne('email' => 'adntraining');
 echo 'este es el resultado ';
 echo $result;
 
